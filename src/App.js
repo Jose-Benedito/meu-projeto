@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
+import HelloWorld  from './components/HelloWorld';
 
 function App() {
+  const name = 'Benedito'
+  const url = 'https://via.placeholder.com/150'
+
+  function sum(a,b){
+    return a*b
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Olá react!</h1>
+    <p>Olá meu caro {name} !</p>
+    <p>A multiplicação de 5 e 68 é {sum(5,68)}</p>
+    <img src={url} alt="imagem teste"/>
+    <HelloWorld/>
     </div>
   );
 }
