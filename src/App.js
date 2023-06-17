@@ -4,6 +4,8 @@ import HelloWorld  from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 import List from './List';
+import Evento from './components/Evento';
+import Form from './components/Form';
 
 function App() {
   const name = 'Maria'
@@ -32,7 +34,14 @@ function App() {
       foto="https://via.placeholder.com/150"/>
 
       <List />
+      <div>
+        <h1>Testando Eventos</h1>
+        <Evento numero="1" />
+        <Evento numero="2" />
+        <Form />
+      </div>
     </div>
+ 
   );
 }
 
