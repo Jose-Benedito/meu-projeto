@@ -36,8 +36,8 @@ function App() {
       <List />
       <div>
         <h1>Testando Eventos</h1>
-        <Evento numero="1" />
-        <Evento numero="2" />
+        <Evento numero="122"/>
+        
         <Form />
       </div>
     </div>
