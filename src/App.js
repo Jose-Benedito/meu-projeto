@@ -8,6 +8,9 @@ import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista';
+import { useState } from 'react'
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
 
 function App() {
   const name = 'Maria'
@@ -16,6 +19,9 @@ function App() {
 
   // lista
   const meusintens = ['React', 'Vue', 'angular']
+
+  // State lift
+  const [nome, setNome] = useState()
 
   function sum(a,b){
     return a*b
@@ -48,6 +54,10 @@ function App() {
       <h1>Renderezação de listas</h1>
       <OutraLista itens= {meusintens} />
       <OutraLista itens= {[]} />
+      <h1>State Lift</h1>
+      <SeuNome setNome={setNome}/>
+      {nome}
+      <Saudacao nome={nome} />
     </div>
    
  
