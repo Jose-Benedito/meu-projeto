@@ -7,11 +7,15 @@ import List from './List';
 import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
+import OutraLista from './components/OutraLista';
 
 function App() {
   const name = 'Maria'
   const url = 'https://via.placeholder.com/150'
   const dono = 'Benedito'
+
+  // lista
+  const meusintens = ['React', 'Vue', 'angular']
 
   function sum(a,b){
     return a*b
@@ -41,7 +45,11 @@ function App() {
         <Condicional />
         <Form />
       </div>
+      <h1>Renderezação de listas</h1>
+      <OutraLista itens= {meusintens} />
+      <OutraLista itens= {[]} />
     </div>
+   
  
   );
 }
