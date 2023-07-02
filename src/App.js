@@ -1,5 +1,5 @@
 
-import './App.css';
+/*import './App.css';
 import HelloWorld  from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
@@ -11,9 +11,20 @@ import OutraLista from './components/OutraLista';
 import { useState } from 'react'
 import SeuNome from './components/SeuNome';
 import Saudacao from './components/Saudacao';
+*/
+
+// React Router
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Empresa from './pages/Empresa'
+import Contato from './pages/Contato'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
-  const name = 'Maria'
+
+  // AULAS
+ /* const name = 'Maria'
   const url = 'https://via.placeholder.com/150'
   const dono = 'Benedito'
 
@@ -61,7 +72,27 @@ function App() {
     </div>
    
  
-  );
+  ); 
+  */
+
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+      <Route exact path="/" element={<Home />} />
+          
+        
+      <Route path="/empresa" element={<Empresa />} />
+          
+  
+      <Route path="/contato" element={<Contato />} />
+        
+      </Routes>
+      <Footer />
+    </Router>
+
+
+  )
 }
 
 export default App;
